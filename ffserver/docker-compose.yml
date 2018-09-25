@@ -1,0 +1,7 @@
+ffserver:
+  image: orlopau/ffserver
+  ports:
+    - "8021:8090"
+  volumes:
+    - ./ffserver.conf:/etc/ffserver.conf
+  #restart: always
