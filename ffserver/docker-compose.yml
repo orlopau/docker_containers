@@ -1,7 +1,13 @@
-ffserver:
-  image: orlopau/ffserver
-  ports:
-    - "8021:8090"
-  volumes:
-    - ./ffserver.conf:/etc/ffserver.conf
-  #restart: always
+version: '3'
+services:
+  ffserver:
+    build: .
+    ports:
+      - "8021:8090"
+    volumes:
+      - ./ffserver.conf:/etc/ffserver.conf
+    restart: always
+  ffmpeg:
+    build: .
+    restart: always
+    command: ./ffmpeg -i "rtsp://192.168.188.14:554" http://ffserver:8090/feed.ffm
