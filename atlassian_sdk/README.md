@@ -1,6 +1,10 @@
 # Atlassian SDK Image
 ## Usage
-Run ```docker run --name atlassdk -it -p 1990:1990 -v $PWD:/home orlopau/atlassian-sdk /bin/bash```
+Run 
+
+```docker run --name atlassdk -it -p 1990:1990 -v $PWD:/home/confi orlopau/atlassian-sdk /bin/bash```
+
+in the directory you want to mirror to the container.
 
 ---
 Later you can easily start and stop the container using
